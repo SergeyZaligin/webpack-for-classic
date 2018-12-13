@@ -1,10 +1,3 @@
-const ImageminPlugin = require("imagemin-webpack");
-const imageminGifsicle = require("imagemin-gifsicle");
-const imageminJpegtran = require("imagemin-jpegtran");
-const imageminOptipng = require("imagemin-optipng");
-const imageminSvgo = require("imagemin-svgo");
-
-
 const path = require('path');
 
 module.exports = {
@@ -12,7 +5,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'public'
   },
 
   devtool: 'sourcemap',
@@ -53,8 +47,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: 'images/[hash][name].[ext]',
-              outputPath: '/public/images',
+              name: '[path][name].[ext]'
             }
           }
         ]
@@ -62,31 +55,6 @@ module.exports = {
     ]
 
   },
-  plugins: [
-
-    new ImageminPlugin({
-      bail: false, 
-      cache: true,
-      imageminOptions: {
-        
-        plugins: [
-          imageminGifsicle({
-            interlaced: true
-          }),
-          imageminJpegtran({
-            progressive: true
-          }),
-          imageminOptipng({
-            optimizationLevel: 5
-          }),
-          imageminSvgo({
-            removeViewBox: true
-          })
-        ]
-
-      }
-
-    })
-  ]
+  plugins: []
 
 }

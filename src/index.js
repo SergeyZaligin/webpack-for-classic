@@ -1,4 +1,4 @@
-import user from './modules/user';
+import user from './javascript/modules/user';
 import './scss/main.scss';
 //import img from './images/logo/brain.png';
 //import img2 from './images/logo/two.png';

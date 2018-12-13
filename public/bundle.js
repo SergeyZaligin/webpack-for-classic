@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "public";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -11806,7 +11806,7 @@ var bar = function () {
   };
 }();
 
-var _user = __webpack_require__(/*! ./modules/user */ "./src/modules/user.js");
+var _user = __webpack_require__(/*! ./javascript/modules/user */ "./src/javascript/modules/user.js");
 
 var _user2 = _interopRequireDefault(_user);
 
@@ -11826,10 +11826,10 @@ bar();
 
 /***/ }),
 
-/***/ "./src/modules/user.js":
-/*!*****************************!*\
-  !*** ./src/modules/user.js ***!
-  \*****************************/
+/***/ "./src/javascript/modules/user.js":
+/*!****************************************!*\
+  !*** ./src/javascript/modules/user.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
