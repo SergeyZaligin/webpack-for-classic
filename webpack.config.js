@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js', './src/scss/main.scss'],
@@ -55,6 +56,18 @@ module.exports = {
     ]
 
   },
-  plugins: []
+  plugins: [
+
+    new CopyWebpackPlugin([{
+      from: './src/images',
+      to: './images'
+    },
+    {
+      from: './src/favicon',
+      to: './favicon'
+    }
+  ]),
+
+  ]
 
 }
