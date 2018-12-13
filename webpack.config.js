@@ -63,8 +63,8 @@ module.exports = {
       to: './images'
     },
     {
-      from: './src/favicon',
-      to: './favicon'
+      from: './src/favicon.ico',
+      to: './favicon.ico'
     }
   ]),
 
