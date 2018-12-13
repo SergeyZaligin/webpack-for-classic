@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
+  
   entry: ['babel-polyfill', './src/index.js', './src/scss/main.scss'],
 
   output: {
@@ -11,10 +12,16 @@ module.exports = {
     publicPath: 'public'
   },
 
+  devServer: {
+      contentBase: path.join(__dirname, 'public'),
+      compress: true,
+      port: 9000
+  },
+
   devtool: 'sourcemap',
 
   module: {
-
+    
     rules: [
        {
          test: /\.js$/,
