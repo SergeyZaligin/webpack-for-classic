@@ -11753,6 +11753,13 @@ module.exports = g;
 "use strict";
 
 
+//import img from './images/logo/brain.png';
+//import img2 from './images/logo/two.png';
+
+//const imgTag = document.querySelector('.img');
+
+//imgTag.setAttribute('src', img);
+
 var foo = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
     return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -11869,14 +11876,15 @@ if(false) {}
 /***/ }),
 
 /***/ 0:
-/*!*******************************************!*\
-  !*** multi babel-polyfill ./src/index.js ***!
-  \*******************************************/
+/*!****************************************************************!*\
+  !*** multi babel-polyfill ./src/index.js ./src/scss/main.scss ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! ./src/index.js */"./src/index.js");
+__webpack_require__(/*! ./src/index.js */"./src/index.js");
+module.exports = __webpack_require__(/*! ./src/scss/main.scss */"./src/scss/main.scss");
 
 
 /***/ })
