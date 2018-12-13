@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js', './src/scss/main.scss'],
@@ -58,15 +59,25 @@ module.exports = {
   },
   plugins: [
 
-    new CopyWebpackPlugin([{
-      from: './src/images',
-      to: './images'
-    },
-    {
-      from: './src/favicon.ico',
-      to: './favicon.ico'
-    }
-  ]),
+    new CopyWebpackPlugin([
+      {
+        from: './src/images',
+        to: './images'
+      },
+      {
+        from: './src/favicon.ico',
+        to: './favicon.ico'
+      }
+    ]),
+    
+    new ImageminPlugin(
+      { 
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        pngquant: {
+          quality: '55-100'
+        }
+      }
+      )
 
   ]
 
