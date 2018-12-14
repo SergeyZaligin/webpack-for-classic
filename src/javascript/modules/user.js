@@ -1,3 +1,3 @@
-const user = { user: "Sergey"};
+const user = { user: 'Sergey'};
 
 export default user;
